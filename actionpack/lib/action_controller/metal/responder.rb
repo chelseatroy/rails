@@ -208,8 +208,6 @@ module ActionController #:nodoc:
         display resource
       elsif post?
         display resource, :status => :created, :location => api_location
-      elsif patch? || put? 
-        display resource, :status => :ok
       else
         head :no_content
       end
